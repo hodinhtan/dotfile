@@ -5,7 +5,7 @@ Plug 'epilande/vim-es2015-snippets'
 Plug 'epilande/vim-react-snippets'
 Plug 'SirVer/ultisnips'
 Plug 'vim-airline/vim-airline'
-Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'for': ['javascript', 'css', 'json', 'graphql'] }
+Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'for': ['javascript', 'vue', 'css', 'json', 'graphql'] }
 Plug 'mxw/vim-jsx'
 Plug 'leafgarland/typescript-vim'
 Plug 'kien/ctrlp.vim'
@@ -36,6 +36,9 @@ call plug#end()
 
 syntax on
 
+set ai
+set hlsearch
+set ruler
 set mouse=a
 " COLORSCHEME
 set t_Co=256
@@ -132,9 +135,9 @@ set shiftwidth=2
 set softtabstop=2
 let g:UltiSnipsExpandTrigger="<C-l>"
 
-let g:prettier#quickfix_enabled = 1
-let g:prettier#autoformat = 1
-" autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html,*.htm PrettierAsync
+let g:prettier#quickfix_enabled = 0
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html,*.htm PrettierAsync
 
 " Key shortcuts
 " ------------------------------------------------
