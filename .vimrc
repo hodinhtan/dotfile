@@ -32,6 +32,7 @@ Plug 'junegunn/goyo.vim'
 Plug 'rakr/vim-one'
 Plug 'mhinz/vim-startify'
 Plug 'Valloric/YouCompleteMe'
+Plug 'posva/vim-vue'
 call plug#end()
 
 syntax on
@@ -98,13 +99,13 @@ let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
 
 
 let NERDTreeShowHidden=0
- function! StartUp()
+function! StartUp()
   if 0 == argc()
     Startify
     NERDTree /var/www
   end
 endfunction
-autocmd VimEnter * call StartUp()
+" autocmd VimEnter * call StartUp()
 
 " Check if NERDTree is open or active
 function! IsNERDTreeOpen()
@@ -174,3 +175,4 @@ autocmd BufEnter * call SyncTree()
 " - gc to commentout the target of a motion
 
 hi Normal guibg=NONE ctermbg=NONE
+set background=dark
